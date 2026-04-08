@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ScaleObject : MonoBehaviour
+public class Scaler : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private Vector3 _moveDirection;
 
-    void Update()
+    private void Update()
     {
         var scale = transform.localScale + _moveDirection * _speed * Time.deltaTime;
 
